@@ -1,28 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-
-img{
-    height: 3.74rem;
-}
-svg{
-   fill: #FFFFFF;
-}
-
-
-.lado-esquerdo, .lado-direito{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-}
-
-.menu{
-    display: flex;
-    margin-left: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
 a{
     text-decoration: none;
     margin-right: 5px;
@@ -30,32 +7,17 @@ a{
     display: flex;
 }
 
-.login{
-    background-color: transparent;
-    cursor: pointer;
-    border: #ed8600 solid 1px;
-    padding: 10px 5px;
-    margin-left: 7px;
-    border-radius: 0.125rem;
-}
-
 .hover{
     border-radius: 5px;
     padding: 0 5px 0 5px ;
 }
+
 .hover:hover{
     border-bottom: #ed8600 solid .125rem;
 }
+
 .btn-border-bottom{
     border-bottom: #ed8600 solid .125rem;
-}
-.login:hover{
-    background-color: rgba(237, 134, 0, 0.03);
-    box-shadow: 0 0 5px rgba(237, 134, 0, 0.3),
-    0 0 15px rgba(237, 134, 0, 0.3),
-    0 0 25px rgba(237, 134, 0, 0.3),
-    0 0 45px rgba(237, 134, 0, 0.3),
-    0 0 25px rgba(237, 134, 0, 0.3) inset;
 }
 
 .style-link{
@@ -68,48 +30,3 @@ a{
     font-size: 16px;
     padding: .5rem;
 }
-
-.style-btn{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-    color: #ed8600;
-}
-
-
-.barra-bottom button {
-    background-color: #0072ED; /* Green */
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-input{
-    background-color: #FFFFFF;
-    border: 1px solid #ADADAD;
-    border-radius: 0.25rem;
-    color: #666666;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    text-overflow: ellipsis;
-    max-width: 215px;
-    height: 25px;
-    width: 100%;
-    padding-top: 0.5rem;
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-}
-.pesquisa{
-    display: flex;
-    width: 100%;
-    align-items: center; 
-    -webkit-box-align: center;
-    justify-content: space-between;
-    width: 295px;
-    height: 42px;
-}
-
-
