@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-.he{
-    min-height: 3.75rem;
-    max-height: auto;
-    width: 100vw;
-    background-color: rgb(255, 255, 255);
-    border-bottom: #ed8600 solid 1px;
-    box-shadow: 0 0 5px rgba(237, 134, 0, 0.6);
 
-}
 img{
     height: 3.74rem;
 }
@@ -16,22 +8,6 @@ svg{
    fill: #FFFFFF;
 }
 
-.barra-top{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 41px 0 41px;
-    max-height: 59px;
-}
-
-.barra-bottom{
-    display: none;
-    width: 100%;
-    position: absolute;
-    border-bottom: 1px solid;
-      border-bottom-color: currentcolor;
-    background-color: #FFFFFF;
-    border-color: #F4F4F4;
-}
 
 .lado-esquerdo, .lado-direito{
     display: flex;

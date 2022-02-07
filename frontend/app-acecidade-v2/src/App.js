@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom"
 import Contatos from "./page/contatos/Contatos";
 import Home from "./page/home/Home";
 import Locais from "./page/locais/Locais";
-import Menu from "./page/component/menu/menu";
+import Menu from "./page/components/menu/menu";
 import './index.css'
 
 function App() {
