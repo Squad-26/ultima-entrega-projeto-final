@@ -26,6 +26,10 @@ function Modal({ id = 'modal', onClose = () => { }, children }) {
         setIdGoogle(googleId);
         setIsLoggedIn(true);
     };
+
+    const falhaGoogle = () => {
+        alert('Erro ao fazer login com o Google!')
+    };
  
     return (
         <div id={id} className="modal" onClick={clickFora}>
@@ -38,11 +42,11 @@ function Modal({ id = 'modal', onClose = () => { }, children }) {
                     <div className='botoes-login'>
                         <div className='botoes-redesosial'>
                             <button className='btn-sosial facebook facebookBackgroud'>Facebook</button>
-                            <GoogleLogin className='btn-sosial facebook facebookBackgroud'
+                            <GoogleLogin className='btn-sosial google googleBackgroud'
                                     clientId="1064343277548-vprmt852g7lfju46nm5b4513vrq1cnlh.apps.googleusercontent.com"
-                                    buttonText="Entrar com o Google"
+                                    buttonText="Google"
                                     onSuccess={sucessoGoogle}
-                                    onFailure={sucessoGoogle}
+                                    onFailure={falhaGoogle}
                                 />
                         </div>
                         <div className="detalhe">
@@ -54,18 +58,6 @@ function Modal({ id = 'modal', onClose = () => { }, children }) {
                         </div>
                         <button className="btn-cadastro">Cadastre-se</button>
                     </div>
-
-                    {isLoggedIn ? (
-                        <div>
-                            <h1>User Information</h1>
-                            <img src={profilePic} alt="Profile" />
-                            <p>Name: {name}</p>
-                            <p>Email: {email}</p>
-                            <p>id: {idGoogle}</p>
-                        </div>
-                    ) : (
-                        ""
-                    )}
                 </section>
             </div>
         </div>
