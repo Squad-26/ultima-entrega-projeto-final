@@ -50,6 +50,8 @@ export default function Menu(){
                         <ButtunLink nome='Home'href='/'/>
                         <ButtunLink nome='Contatos' href='/contatos'/>
                         <ButtunLink nome='Locais' href='/locais'/>
+                        <ButtunLink nome='Artigos' href='/artigos'/>
+
 
                     </Box>
                 </Box>
@@ -69,7 +71,7 @@ export default function Menu(){
                   }}
                   variant="secondary"
                 />
-                    
+
             </Box>
            {ModalVisivel ? <Modal onClose={() => setModalVisivel(false)}/> : null}
         </>
