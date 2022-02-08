@@ -1,24 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactDOM from 'react-dom';
 import "./modal.css"
+import GoogleLogin from "react-google-login";
 
 
-function Modal({ id = 'modal', onClose = () =>{}, children}){
-    const clickFora = (e) =>{
-        if(e.target.id === id) onClose()
+function Modal({ id = 'modal', onClose = () => { }, children }) {
+    const clickFora = (e) => {
+        if (e.target.id === id) onClose()
     }
 
-    return(
-        <div id={id} className="modal"  onClick={clickFora}>
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [profilePic, setProfilePic] = useState();
+    const [idGoogle, setIdGoogle] = useState();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const sucessoGoogle = (response) => {
+        console.log(response);
+        const {
+            profileObj: { name, email, imageUrl, googleId },
+        } = response;
+        setName(name);
+        setEmail(email);
+        setProfilePic(imageUrl);
+        setIdGoogle(googleId);
+        setIsLoggedIn(true);
+    };
+
+    const falhaGoogle = () => {
+        alert('Erro ao fazer login com o Google!')
+    };
+ 
+    return (
+        <div id={id} className="modal" onClick={clickFora}>
             <div className="conteiner">
                 <header className='header-login'>
                     <h3>Acesse ou cadastre-se</h3>
-                    <button className='fechar' onClick={onClose}/>
+                    <button className='fechar' onClick={onClose} />
                 </header>
                 <section>
                     <div className='botoes-login'>
                         <div className='botoes-redesosial'>
                             <button className='btn-sosial facebook facebookBackgroud'>Facebook</button>
-                            <button className='btn-sosial google googleBackgroud'>Google</button>
+                            <GoogleLogin className='btn-sosial google googleBackgroud'
+                                    clientId="1064343277548-vprmt852g7lfju46nm5b4513vrq1cnlh.apps.googleusercontent.com"
+                                    buttonText="Google"
+                                    onSuccess={sucessoGoogle}
+                                    onFailure={falhaGoogle}
+                                />
                         </div>
                         <div className="detalhe">
                             <p className="p-style">ou</p>
