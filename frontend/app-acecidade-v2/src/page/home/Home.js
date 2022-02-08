@@ -13,7 +13,8 @@ export default function Home(){
     padding: '16px'
   }}
 >
-  Home
+  Home hjlvç
+  
 </Box>
     )
 }
