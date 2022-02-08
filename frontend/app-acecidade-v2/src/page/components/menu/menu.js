@@ -48,33 +48,36 @@ export default function Menu() {
             tag="nav"
           >
 
-            <ButtunLink nome='Home' href='/' />
-            <ButtunLink nome='Contatos' href='/contatos' />
-            <ButtunLink nome='Locais' href='/locais' />
 
-          </Box>
-        </Box>
-        <Button
-          label="Entre ou Cadastre-se"
-          onClick={
-            () => { setModalVisivel(true) }
-          }
-          rounded="full"
-          size="xl"
-          styleSheet={{
-            disabled: {},
-            focus: {},
-            hover: {
-              'box-shadow': '0 0 5px rgba(237, 134, 0, 0.3),     0 0 15px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3),     0 0 45px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3) inset'
-            }
-          }}
-          variant="secondary"
-        />
+                        <ButtunLink nome='Home'href='/'/>
+                        <ButtunLink nome='Contatos' href='/contatos'/>
+                        <ButtunLink nome='Locais' href='/locais'/>
+                        <ButtunLink nome='Artigos' href='/artigos'/>
 
-      </Box>
-      {ModalVisivel ? <Modal onClose={() => setModalVisivel(false)} /> : null}
-    </>
-  )
+
+                    </Box>
+                </Box>
+                <Button
+                  label="Entre ou Cadastre-se"
+                  onClick={
+                    () =>  {setModalVisivel(true)}
+                  }
+                  rounded="full"
+                  size="xl"
+                  styleSheet={{
+                    disabled: {},
+                    focus: {},
+                    hover: {
+                      'box-shadow': '0 0 5px rgba(237, 134, 0, 0.3),     0 0 15px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3),     0 0 45px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3) inset'
+                    }
+                  }}
+                  variant="secondary"
+                />
+
+            </Box>
+           {ModalVisivel ? <Modal onClose={() => setModalVisivel(false)}/> : null}
+        </>
+    )
 }
 
 export function ButtunLink({ href = '/', nome = "trocar" }) {

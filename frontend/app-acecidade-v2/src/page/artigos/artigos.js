@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from '@skynexui/components';
 
-export default function Home(){
+export default function Artigos(){
     return(
 <Box
   styleSheet={{
@@ -13,7 +13,7 @@ export default function Home(){
     padding: '16px'
   }}
 >
-  Home
+  Artigos
 </Box>
     )
 }
