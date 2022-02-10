@@ -1,40 +1,6 @@
 
-.modal{
-    width: 100%;
-    height: 105vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0, .80);
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
 
-.conteiner{
-    background-color: rgb(74, 66, 187);
-    width: 432px;
-    height: 391px;
-    max-width: 100%;
-    border-radius: 10px;
-    
-}
-
-.header-login{
-    border-radius: 10px;
-
-    padding: 24px;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-.header-login h3{
-    margin: 0px;
-    margin-right: 40px;
-    font-size: 1.75rem;
-}
 .fechar{
     width: 30px;
     height: 30px;
@@ -42,7 +8,7 @@
     outline: none;
     border: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
@@ -67,64 +33,6 @@
 
 }
 
-
-.botoes-login{
-    flex-direction: column;
-    align-items: center;
-}
-.botoes-redesosial{
-    justify-content: space-between;
-    height: 50px;
-    width: 384px;
-    margin-bottom: 24px;
-}
-
-section, .botoes-login, .botoes-redesosial{
-    display: flex;
-}
-section{
-    flex-direction: column;
-    align-items: center;
-}
-.facebook{
-    background-color: rgb(88, 144, 255);
-    color: #FFFFFF;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 700;
-    border-radius: 5px;
-    border: none;
-}
-.facebookBackgroud{
-    background-image: url("https://www.promobit.com.br/dist/images/features/login/facebook-login-icon.svg");
-}
-.googleBackgroud{
-    background-image: url("https://www.promobit.com.br/dist/images/features/login/google-login-icon.svg");
-}
-.facebookBackgroud, .googleBackgroud{
-    background-repeat: no-repeat;
-    background-size: 1rem;
-    background-position: 30px;
-}
-.googleBackgroud{
-    background-position: 40px;
-}
-.facebook, .google{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-
-}
-
-.google{
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(221, 221, 221);
-    color: #6b6b6b;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-}
 .detalhe{
     width: 100%;
 }
@@ -155,21 +63,6 @@ section{
     margin: 0;
     background-color: rgb(244, 244, 244);
 }
-
-.btn-email{
-    height: 50px;
-    width: 100%;
-    padding: 12px;
-    color: #FFFFFF;
-    background-color: #0072ED;
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
 .div-membro{
     width: 100%;
     height: 40px;
@@ -190,26 +83,3 @@ section{
     font-weight: 400;
 }
 
-.btn-cadastro{
-    height: 50px;
-    width: 100%;
-    padding: 12px;
-    color: #FFFFFF;
-    background-color: rgb(0, 138, 35);
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 700;
-    margin-top: 10px;
-}
-.btn-cadastro:hover{
-    background-color: rgb(0, 101, 17);
-}
-
-.btn-sosial{
-    height: 50px;
-    width: 184px;
-    padding: 12px;
-    border-radius: 1px solid;
-}
