@@ -7,7 +7,7 @@ import { Box, Button, Image } from '@skynexui/components';
 import Colors from '../../theme/Colors'
 
 export default function Menu() {
-  const [ModalVisivel, setModalVisivel] = useState(true)
+  const [ModalVisivel, setModalVisivel] = useState(false)
 
   return (
     <>
