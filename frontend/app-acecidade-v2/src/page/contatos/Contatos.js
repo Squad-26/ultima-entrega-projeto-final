@@ -23,7 +23,7 @@ export default function Contatos() {
   return (
     <Box
       styleSheet={{
-        background: `linear-gradient(to bottom, ${Colors.Background_1}, ${Colors.Background_2})`,
+        background: 'linear-gradient(to bottom, ${Colors.Background_1}, ${Colors.Background_2})',
         backgroundColor: {
           xl: '#222'
         },
