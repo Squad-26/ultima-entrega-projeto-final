@@ -3,22 +3,24 @@ body{
     padding: 0%;
 }
 * {
-    scrollbar-width: 10px;
+    scrollbar-width: 5px;
     scrollbar-color: rgb(255, 174, 0) rgb(37, 37, 37);
   }
   
   /* Works on Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 20px;
+    width: 5px;
   }
   
   *::-webkit-scrollbar-track {
     background: rgb(17, 17, 17);
+    width: 5px;
   }
   
   *::-webkit-scrollbar-thumb {
     background-color: rgb(34, 34, 34);
     border-radius: 20px;
     border: 10px solid orange;
+    width: 5px;
   }
   
