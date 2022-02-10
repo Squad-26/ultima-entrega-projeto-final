@@ -1,37 +1,18 @@
 import * as React from "react";
 import Colors from '../theme/Colors';
 import { TextField, Box, Button } from '@skynexui/components';
-import { useFormik } from 'formik';
-import { Select } from '@workday/canvas-kit-preview-react/select';
-import {
-  FormField,
-  useFormFieldInput,
-  useFormFieldModel,
-} from '@workday/canvas-kit-preview-react/form-field';
+import Select, { SelectOption } from '@workday/canvas-kit-react-select';
+import { FormField } from '@workday/canvas-kit-preview-react/form-field';
 
 export default function Contatos() {
   
   // Responsável pelo select 
-  const formik = useFormik({
-    initialValues: {
-      selectForm: '',
-    },
-    onSubmit: data => {
-      console.log(data);
-    },
-  });
+  const [formSelect, onChangeSelect] = React.useState('default');
 
-  const model = useFormFieldModel();
-  const formFieldInputProps = useFormFieldInput(model);
-
-  const bookList = [
-    { label: 'Selecione uma opção', value: 'default' },
-    { label: 'Reportar um erro', value: 'reportar um erro' },
-    { label: 'Sugestões de melhorias', value: 'sugestoes' },
-    { label: 'Inlusão de estabelecimento', value: 'inlusao de estabelecimento' },
-    { label: 'Reclamações', value: 'Reclamacoes' },
-    { label: 'Elogios', value: 'elogios' },
-  ];
+  const handleChange = event => {
+    onChangeSelect(event.currentTarget.value);
+  };
+  
   // Fim select
 
  // Resto do form alterar os dados nos inputs
@@ -104,32 +85,29 @@ export default function Contatos() {
             />
           </div>
           <div className="form-group">
-            <FormField orientation="vertical" alignItems="stretch" styleSheet={{
-              width: '97%'
-            }}>
+            <FormField inputId="formContatoSelect" grow={true}>
               <FormField.Label>Selecione o tipo de contato: </FormField.Label>
-              <Select
-                name="selectForm"
-                rounded="md"
-                options={bookList}
-                onChange={event => formik.setFieldValue('selectForm', event.currentTarget.value)}
-                value={formik.values.selectForm}
-                grow
-                {...formFieldInputProps}
-              />
+              <Select name="contatoSelect" onChange={handleChange} value={formSelect}>
+                <SelectOption label="Selecione uma opção" value="default" />
+                <SelectOption label="Reportar um erro" value="reportar um erro" />
+                <SelectOption label="Sugestões de melhorias" value="sugestoes" />
+                <SelectOption label="Inlusão de estabelecimento" value="inlusao de estabelecimento" />
+                <SelectOption label="Reclamações" value="reclamacoes" />
+                <SelectOption label="Elogios" value="elogios" />
+              </Select>
             </FormField>
           </div>
           <div className="form-group">
             <TextField
               type="textarea"
               label="Descrição:"
-              maxLength={2000}
-              name="descricao"
+              name="contatoDescricao"
               onChangeText={onChangeDescricao}
               placeholder="Fale mais sobre o motivo do contato..."
               rounded="md"
               styleSheet={{
-                width: '97%'
+                width: '97%',
+                margin: '1em 0px' 
               }}
               value={descricaoForm}
               variant="basicBordered"
@@ -148,7 +126,7 @@ export default function Contatos() {
               type="submit"
               styleSheet={{
                 width: '100%',
-                'margin-top': '10px',
+                margin: '1em 0px',
               }}
             />
           </div>
