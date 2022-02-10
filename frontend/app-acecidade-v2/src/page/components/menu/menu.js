@@ -7,7 +7,7 @@ import { Box, Button, Image } from '@skynexui/components';
 import Colors from '../../theme/Colors'
 
 export default function Menu() {
-  const [ModalVisivel, setModalVisivel] = useState(false)
+  const [ModalVisivel, setModalVisivel] = useState(true)
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function Menu() {
           xs: 'white'
         },
         ' box-shadow': '0 0 5px rgba(237, 134, 0, 0.6)',
-        'border-bottom': '#ed8600 solid 1px',
+        'border-bottom': '${colors.orenger}, solid 1px',
         'justify-content': 'space-between',
         color: Colors.Azul_Menu,
         display: 'flex',

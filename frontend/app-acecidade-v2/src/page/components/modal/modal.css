@@ -10,15 +10,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .conteiner{
-    background-color: #FFFFFF;
+    background-color: rgb(74, 66, 187);
     width: 432px;
     height: 391px;
     max-width: 100%;
     border-radius: 10px;
-    border: 1px solid black;
+    
 }
 
 .header-login{
@@ -135,7 +136,7 @@ section{
     margin: 5px;
     justify-content: space-between;
     font-size: 16px;
-    color: #5f5f5f;
+    color: #ffffff;
 }
 
 .detalhe p::before{
