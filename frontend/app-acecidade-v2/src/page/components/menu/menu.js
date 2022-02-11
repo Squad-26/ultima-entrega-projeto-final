@@ -24,14 +24,14 @@ export default function Menu() {
         'justify-content': 'space-between',
         color: Colors.Azul_Menu,
         display: 'flex',
-        height: '3.75rem',
+        height: '90px',
         color: 'white',
         padding: '16px',
       }}
         tag="header"
       >
 
-        <Image src={logo} alt="logo com um homem segurando muletas e ao seu redor simbolos representando os pcds" />{/* adicionar o click pra home */}
+        <Image className="ml-6" src={logo} alt="logo com um homem segurando muletas e ao seu redor simbolos representando os pcds" />{/* adicionar o click pra home */}
         <Box styleSheet={{
           color: Colors.Azul_Menu,
           display: 'flex',

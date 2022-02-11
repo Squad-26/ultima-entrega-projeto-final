@@ -4,7 +4,7 @@ import { TextField, Box, Button } from '@skynexui/components';
 import Select, { SelectOption } from '@workday/canvas-kit-react-select';
 import { FormField } from '@workday/canvas-kit-preview-react/form-field';
 import 'bulma/css/bulma.min.css';
-import { InputFile, Form } from 'react-bulma-components';
+import { Form } from 'react-bulma-components';
 
 
 export default function Contatos() {
@@ -34,9 +34,6 @@ export default function Contatos() {
     <Box
       styleSheet={{
         background: `linear-gradient(to bottom, ${Colors.Background_1}, ${Colors.Background_2})`,
-        backgroundColor: {
-          xl: '#222'
-        },
         width: '100%',
         display: 'flex',
         'justify-content': 'center',
@@ -46,9 +43,6 @@ export default function Contatos() {
       <Box
         styleSheet={{
           background: `linear-gradient(to bottom, ${Colors.Indigo_100}, ${Colors.Indigo_50})`,
-          backgroundColor: {
-            xl: Colors.Indigo_100
-          },
           border: '0px solid blue',
           'border-radius': '20px',
           'box-shadow': `0px 2px 5px ${Colors.Indigo_200}`,
@@ -69,13 +63,10 @@ export default function Contatos() {
               onChangeText={onChangeEmail}
               placeholder="Digite seu email"
               rounded="md"
-              styleSheet={{}}
               type="email"
               value={emailForm}
               variant="basicBordered"
-              styleSheet={{
-                width: '100%'
-              }}
+              styleSheet={{width: '100%'}}
             />
           </div>
             <TextField
@@ -84,13 +75,10 @@ export default function Contatos() {
               onChangeText={onChangeAssunto}
               placeholder="Dê uma descrição breve do contato"
               rounded="md"
-              styleSheet={{}}
               type="text"
               value={assuntoForm}
               variant="basicBordered"
-              styleSheet={{
-                width: '100%'
-              }}
+              styleSheet={{width: '100%'}}
             />
           <FormField grow={true} inputId="formContatoSelect">
               <FormField.Label>Selecione o tipo de contato: </FormField.Label>
