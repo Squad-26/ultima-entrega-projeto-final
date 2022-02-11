@@ -8,10 +8,29 @@ import Colors from '../../theme/Colors'
 
 export default function Menu() {
   const [ModalVisivel, setModalVisivel] = useState(false)
+  return(
+    <MenuPC setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel}/>
+  )
+}
 
+export function ButtunLink({ href = '/', nome = "trocar" }) {
+
+  const paginaAtual = useLocation()
+
+  var styleHoverLink = 'style-link hover'
+  if (paginaAtual.pathname === href) {
+    styleHoverLink += ' btn-border-bottom'
+  }
+  return (<Link to={href}><span ><p className={styleHoverLink}>{nome}</p></span></Link>)
+}
+
+
+
+function MenuPC({setModalVisivel, ModalVisivel}){
   return (
     <>
-      <Box styleSheet={{
+      <Box on
+      styleSheet={{
         backgroundColor: {
           lg: 'white',
           md: 'white',
@@ -20,7 +39,7 @@ export default function Menu() {
           xs: 'white'
         },
         ' box-shadow': '0 0 5px rgba(237, 134, 0, 0.6)',
-        'border-bottom': '${colors.orenger}, solid 1px',
+        'border-bottom': `${Colors.orenger}, solid 1px`,
         'justify-content': 'space-between',
         color: Colors.Azul_Menu,
         display: 'flex',
@@ -49,46 +68,33 @@ export default function Menu() {
           >
 
 
-                        <ButtunLink nome='Home'href='/'/>
-                        <ButtunLink nome='Contatos' href='/contatos'/>
-                        <ButtunLink nome='Locais' href='/locais'/>
-                        <ButtunLink nome='Artigos' href='/artigos'/>
+            <ButtunLink nome='Home' href='/' />
+            <ButtunLink nome='Contatos' href='/contatos' />
+            <ButtunLink nome='Locais' href='/locais' />
+            <ButtunLink nome='Artigos' href='/artigos' />
 
 
-                    </Box>
-                </Box>
-                <Button
-                  label="Entre ou Cadastre-se"
-                  onClick={
-                    () =>  {setModalVisivel(true)}
-                  }
-                  rounded="full"
-                  size="xl"
-                  styleSheet={{
-                    disabled: {},
-                    focus: {},
-                    hover: {
-                      'box-shadow': '0 0 5px rgba(237, 134, 0, 0.3),     0 0 15px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3),     0 0 45px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3) inset'
-                    }
-                  }}
-                  variant="secondary"
-                />
+          </Box>
+        </Box>
+        <Button
+          label="Entre ou Cadastre-se"
+          onClick={
+            () => { setModalVisivel(true) }
+          }
+          rounded="full"
+          size="xl"
+          styleSheet={{
+            disabled: {},
+            focus: {},
+            hover: {
+              'box-shadow': '0 0 5px rgba(237, 134, 0, 0.3),     0 0 15px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3),     0 0 45px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3) inset'
+            }
+          }}
+          variant="secondary"
+        />
 
-            </Box>
-           {ModalVisivel ? <Modal onClose={() => setModalVisivel(false)}/> : null}
-        </>
-    )
+      </Box>
+      {ModalVisivel ? <Modal onClose={() => setModalVisivel(false)} /> : null}
+    </>
+  )
 }
-
-export function ButtunLink({ href = '/', nome = "trocar" }) {
-
-  const paginaAtual = useLocation()
-
-  var styleHoverLink = 'style-link hover'
-  if (paginaAtual.pathname === href) {
-    styleHoverLink += ' btn-border-bottom'
-  }
-  return (<Link to={href}><span ><p className={styleHoverLink}>{nome}</p></span></Link>)
-}
-
-
