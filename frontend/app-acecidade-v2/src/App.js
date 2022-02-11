@@ -7,11 +7,13 @@ import Menu from "./page/components/menu/menu";
 import Artigos from "./page/artigos/artigos";
 import './index.css'
 import Footer from "./page/components/footer/Footer";
+import VLibras from "@djpfs/react-vlibras";
 
 function App() {
   return (
     <>
       <Menu />
+      <VLibras />
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/contatos" element={<Contatos />}/>
