@@ -3,6 +3,9 @@ import Colors from '../theme/Colors';
 import { TextField, Box, Button } from '@skynexui/components';
 import Select, { SelectOption } from '@workday/canvas-kit-react-select';
 import { FormField } from '@workday/canvas-kit-preview-react/form-field';
+import 'bulma/css/bulma.min.css';
+import { InputFile, Form } from 'react-bulma-components';
+
 
 export default function Contatos() {
   
@@ -14,11 +17,18 @@ export default function Contatos() {
   };
   
   // Fim select
+//responsavel pelo file
+  const handleChangeFile = e => {
+    onChangeAnexo(e.currentTarget.files);
+    onChangeFilenameForm(e.currentTarget.value);
+  };
 
  // Resto do form alterar os dados nos inputs
   const [emailForm, onChangeEmail] = React.useState("");
   const [assuntoForm, onChangeAssunto] = React.useState("");
   const [descricaoForm, onChangeDescricao] = React.useState("");
+  const [anexoForm, onChangeAnexo] = React.useState();
+  const [filenameForm, onChangeFilenameForm] = React.useState();
 
   return (
     <Box
@@ -64,11 +74,10 @@ export default function Contatos() {
               value={emailForm}
               variant="basicBordered"
               styleSheet={{
-                width: '97%'
+                width: '100%'
               }}
             />
           </div>
-          <div className="form-group">
             <TextField
               label="Qual o assunto do contato:"
               name="contatoAssunto"
@@ -80,15 +89,13 @@ export default function Contatos() {
               value={assuntoForm}
               variant="basicBordered"
               styleSheet={{
-                width: '97%'
+                width: '100%'
               }}
             />
-          </div>
-          <div className="form-group">
-            <FormField inputId="formContatoSelect" grow={true}>
+          <FormField grow={true} inputId="formContatoSelect">
               <FormField.Label>Selecione o tipo de contato: </FormField.Label>
-              <Select name="contatoSelect" onChange={handleChange} value={formSelect}>
-                <SelectOption label="Selecione uma opção" value="default" />
+            <Select name="contatoSelect" onChange={handleChange} value={formSelect}>
+              <SelectOption disabled={true} label="Selecione uma opção" value="default" />
                 <SelectOption label="Reportar um erro" value="reportar um erro" />
                 <SelectOption label="Sugestões de melhorias" value="sugestoes" />
                 <SelectOption label="Inlusão de estabelecimento" value="inlusao de estabelecimento" />
@@ -96,8 +103,6 @@ export default function Contatos() {
                 <SelectOption label="Elogios" value="elogios" />
               </Select>
             </FormField>
-          </div>
-          <div className="form-group">
             <TextField
               type="textarea"
               label="Descrição:"
@@ -106,20 +111,22 @@ export default function Contatos() {
               placeholder="Fale mais sobre o motivo do contato..."
               rounded="md"
               styleSheet={{
-                width: '97%',
+                width: '100%',
                 margin: '1em 0px' 
               }}
               value={descricaoForm}
               variant="basicBordered"
             />
-          </div>
-          <div className="form-group">
-            <label for="Anexo1">Selecione um anexo</label>
-            <input type="file" name="anexo" className="form-control-file" id="Anexo1" />
-            <input type="hidden" name="_autoresponse"
-              value="Recebemos seu e-mail e logo retornaremos ! Att equipe AceCidade." />
-          </div>
-          <div>
+          <Form.InputFile
+            name="anexoContato"
+            value={anexoForm}
+            align="left"
+            color={Colors.Indigo_100}
+            filename={filenameForm}
+            label="Escolher Arquivos"
+            onChange={handleChangeFile}
+            size="default"
+          />
             <Button
               label="Enviar"
               rounded="md"
@@ -129,7 +136,6 @@ export default function Contatos() {
                 margin: '1em 0px',
               }}
             />
-          </div>
         </form>
       </Box>
     </Box >
