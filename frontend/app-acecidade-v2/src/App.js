@@ -6,6 +6,7 @@ import Locais from "./page/locais/Locais";
 import Menu from "./page/components/menu/menu";
 import Artigos from "./page/artigos/artigos";
 import './index.css'
+import Footer from "./page/components/footer/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 
         <Route path="*" element={<h1>Pagina não Encontrada</h1>}/>
       </Routes>
+      <Footer />
     </>
   );
 }
