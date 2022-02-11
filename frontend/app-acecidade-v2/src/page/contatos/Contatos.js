@@ -74,7 +74,7 @@ export default function Contatos() {
               value={emailForm}
               variant="basicBordered"
               styleSheet={{
-                width: '97%'
+                width: '100%'
               }}
             />
           </div>
@@ -89,13 +89,13 @@ export default function Contatos() {
               value={assuntoForm}
               variant="basicBordered"
               styleSheet={{
-                width: '97%'
+                width: '100%'
               }}
             />
-            <FormField inputId="formContatoSelect" grow={true}>
+          <FormField grow={true} inputId="formContatoSelect">
               <FormField.Label>Selecione o tipo de contato: </FormField.Label>
-              <Select name="contatoSelect" onChange={handleChange} value={formSelect}>
-                <SelectOption label="Selecione uma opção" value="default" />
+            <Select name="contatoSelect" onChange={handleChange} value={formSelect}>
+              <SelectOption disabled={true} label="Selecione uma opção" value="default" />
                 <SelectOption label="Reportar um erro" value="reportar um erro" />
                 <SelectOption label="Sugestões de melhorias" value="sugestoes" />
                 <SelectOption label="Inlusão de estabelecimento" value="inlusao de estabelecimento" />
@@ -111,7 +111,7 @@ export default function Contatos() {
               placeholder="Fale mais sobre o motivo do contato..."
               rounded="md"
               styleSheet={{
-                width: '97%',
+                width: '100%',
                 margin: '1em 0px' 
               }}
               value={descricaoForm}
