@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Menu />
-      <VLibras />
+      
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/contatos" element={<Contatos />}/>
@@ -21,6 +21,7 @@ function App() {
         <Route path="/Artigos" element={<Artigos />}/>
 
         <Route path="*" element={<h1>Pagina não Encontrada</h1>}/>
+        <VLibras />
       </Routes>
       <Footer />
     </>
