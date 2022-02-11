@@ -21,9 +21,10 @@ function App() {
         <Route path="/Artigos" element={<Artigos />}/>
 
         <Route path="*" element={<h1>Pagina não Encontrada</h1>}/>
-        <VLibras />
+        
       </Routes>
       <Footer />
+       <VLibras />
     </>
   );
 }
