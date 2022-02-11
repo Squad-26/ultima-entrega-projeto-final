@@ -30,6 +30,7 @@ export default function Modal({ id = 'modal', onClose = () => { }, children }) {
         position: 'absolute',
         top: '0px',
         'z-index': 10,
+        overflow:'hidden'
       }
       }>
       <Box styleSheet={{
@@ -80,9 +81,22 @@ function Cadastro(props) {
   return (
     <>
       <TextField
-        fullWidth
-        label="Senha"
-        type="password"
+        label="Nome"
+        type="text"
+        styleSheet={{width:'90%'}}
+        textFieldColors={{
+          neutral: {
+            textColor: `white `,
+            mainColor: 'white',
+            mainColorHighlight: 'orange',
+            backgroundColor: 'black',
+          },
+        }}
+      />
+      <TextField
+        label="E-mail"
+        type="email"
+        styleSheet={{width:'90%'}}
         textFieldColors={{
           neutral: {
             textColor: 'white',
@@ -93,9 +107,10 @@ function Cadastro(props) {
         }}
       />
       <TextField
-        fullWidth
         label="Senha"
         type="password"
+        styleSheet={{width:'90%'}}
+
         textFieldColors={{
           neutral: {
             textColor: 'white',
@@ -106,35 +121,11 @@ function Cadastro(props) {
         }}
       />
       <TextField
-        fullWidth
-        label="Senha"
+      
+        label="Confirmar Senha"
         type="password"
-        textFieldColors={{
-          neutral: {
-            textColor: 'white',
-            mainColor: 'white',
-            mainColorHighlight: 'orange',
-            backgroundColor: 'black',
-          },
-        }}
-      />
-      <TextField
-        fullWidth
-        label="Senha"
-        type="password"
-        textFieldColors={{
-          neutral: {
-            textColor: 'white',
-            mainColor: 'white',
-            mainColorHighlight: 'orange',
-            backgroundColor: 'black',
-          },
-        }}
-      />
-      <TextField
-        fullWidth
-        label="Senha"
-        type="password"
+        styleSheet={{width:'90%'}}
+
         textFieldColors={{
           neutral: {
             textColor: 'white',
@@ -154,7 +145,6 @@ function Cadastro(props) {
         label='Cadastrar'
         fullWidth
         styleSheet={{
-          marginTop: '4rem',
           height: '3rem',
           'font-size': '3rem',
           fontFamily: 'ROBOTO',
@@ -254,7 +244,6 @@ function Login(props) {
         label='Cadastrar'
         fullWidth
         styleSheet={{
-          marginTop: '4rem',
           height: '3rem',
           'font-size': '3rem',
           fontFamily: 'ROBOTO',
