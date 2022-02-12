@@ -32,7 +32,7 @@ export default function Modal({ id = 'modal', onClose = () => { }, children }) {
         position: 'absolute',
         top: '0px',
         'z-index': 10,
-        overflow:'hidden'
+        overflow: 'hidden'
       }
       }>
       <Box styleSheet={{
@@ -85,7 +85,7 @@ function Cadastro(props) {
       <TextField
         label="Nome"
         type="text"
-        styleSheet={{width:'90%'}}
+        styleSheet={{ width: '90%' }}
         textFieldColors={{
           neutral: {
             textColor: `white `,
@@ -98,7 +98,7 @@ function Cadastro(props) {
       <TextField
         label="E-mail"
         type="email"
-        styleSheet={{width:'90%'}}
+        styleSheet={{ width: '90%' }}
         textFieldColors={{
           neutral: {
             textColor: 'white',
@@ -111,7 +111,7 @@ function Cadastro(props) {
       <TextField
         label="Senha"
         type="password"
-        styleSheet={{width:'90%'}}
+        styleSheet={{ width: '90%' }}
 
         textFieldColors={{
           neutral: {
@@ -123,10 +123,10 @@ function Cadastro(props) {
         }}
       />
       <TextField
-      
+
         label="Confirmar Senha"
         type="password"
-        styleSheet={{width:'90%'}}
+        styleSheet={{ width: '90%' }}
 
         textFieldColors={{
           neutral: {
@@ -291,8 +291,9 @@ function ConteudoDefault(props) {
     setIsLoggedIn(true);
   };
 
-  const falhaGoogle = () => {
+  const falhaGoogle = (dados) => {
     alert('Erro ao fazer login com o Google!')
+    console.log(dados)
   };
   //Google login Fim
 
@@ -300,24 +301,21 @@ function ConteudoDefault(props) {
   return (
     <>
 
-      <Box styleSheet={{ justifyContent: 'space-between', display:'flex' }}>
-        {/*<Button
-          colorVariant="positive"
-          iconName="facebook"
-          label="Facebook"
-        />*/}
+      <Box styleSheet={{ justifyContent: 'space-between', display: 'flex' }}>
+
         <FacebookLoginComponent />
+
         <Button
           iconName="google"
           label="Google"
           size="md"
         />
-        {/*               <GoogleLogin 
-                      clientId="1064343277548-vprmt852g7lfju46nm5b4513vrq1cnlh.apps.googleusercontent.com"
-                      buttonText="Google"
-                      onSuccess={sucessoGoogle}
-                      onFailure={falhaGoogle}
-                  />  */}
+        <GoogleLogin
+          clientId="1064343277548-9gsoiceruc3t16mrj5st9hoqlnk63bdn.apps.googleusercontent.com"
+          buttonText="Google"
+          onSuccess={sucessoGoogle}
+          onFailure={falhaGoogle}
+        />
       </Box>
       <div className="detalhe">
         <p className="p-style">ou</p>
