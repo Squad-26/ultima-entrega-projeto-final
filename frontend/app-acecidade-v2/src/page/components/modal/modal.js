@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./modal.css"
 import GoogleLogin from "react-google-login";
+import FacebookLogin from 'react-facebook-login';
 import { Box, Button, Text, TextField } from '@skynexui/components';
+import FacebookLoginComponent from '../facebookLogin/facebooklogin.component'
 
 export default function Modal({ id = 'modal', onClose = () => { }, children }) {
   const clickFora = (e) => {
@@ -270,12 +272,12 @@ function ConteudoDefault(props) {
   let setCadastro = props.setCadastro
   props.setTitulo('Acesse ou Cadastre-se')
 
+  //Google login Inicio
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [profilePic, setProfilePic] = useState();
   const [idGoogle, setIdGoogle] = useState();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
 
   const sucessoGoogle = (response) => {
     console.log(response);
@@ -292,16 +294,19 @@ function ConteudoDefault(props) {
   const falhaGoogle = () => {
     alert('Erro ao fazer login com o Google!')
   };
+  //Google login Fim
+
 
   return (
     <>
 
       <Box styleSheet={{ justifyContent: 'space-between', display:'flex' }}>
-        <Button
+        {/*<Button
           colorVariant="positive"
           iconName="facebook"
           label="Facebook"
-        />
+        />*/}
+        <FacebookLoginComponent />
         <Button
           iconName="google"
           label="Google"
