@@ -3,6 +3,7 @@ import "./modal.css"
 import GoogleLogin from "react-google-login";
 import FacebookLogin from 'react-facebook-login';
 import { Box, Button, Text, TextField } from '@skynexui/components';
+import FacebookLoginComponent from '../facebookLogin/facebooklogin.component'
 
 export default function Modal({ id = 'modal', onClose = () => { }, children }) {
   const clickFora = (e) => {
@@ -295,23 +296,6 @@ function ConteudoDefault(props) {
   };
   //Google login Fim
 
-  //Facebook login Inicio
-  const [loginFacebook, setLoginFacebook] = useState(false);
-  const [data, setData] = useState({});
-  const [picture, setPicture] = useState('');
-
-
-  const responseFacebook = (response) => {
-    console.log(response);
-    setData(response);
-    setPicture(response.picture.data.url);
-    if (response.accessToken) {
-      setLoginFacebook(true);
-    } else {
-      setLoginFacebook(false);
-    }
-  }
-  //Facebook login Fim
 
   return (
     <>
@@ -322,13 +306,7 @@ function ConteudoDefault(props) {
           iconName="facebook"
           label="Facebook"
         />*/}
-        <FacebookLogin
-          appId="653826605774364"
-          autoLoad={true}
-          fields="name,email,picture"
-          scope="public_profile,user_friends"
-          callback={responseFacebook}
-          icon="fa-facebook" />
+        <FacebookLoginComponent />
         <Button
           iconName="google"
           label="Google"
