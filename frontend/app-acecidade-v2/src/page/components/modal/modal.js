@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./modal.css"
-import GoogleLogin from "react-google-login";
-import FacebookLogin from 'react-facebook-login';
 import { Box, Button, Text, TextField } from '@skynexui/components';
 import FacebookLoginComponent from '../facebookLogin/facebooklogin.component'
+import GoogleLoginComponent from "../googleLogin/googlelogin.component";
 
 export default function Modal({ id = 'modal', onClose = () => { }, children }) {
   const clickFora = (e) => {
@@ -32,7 +31,7 @@ export default function Modal({ id = 'modal', onClose = () => { }, children }) {
         position: 'absolute',
         top: '0px',
         'z-index': 10,
-        overflow:'hidden'
+        overflow: 'hidden'
       }
       }>
       <Box styleSheet={{
@@ -85,7 +84,7 @@ function Cadastro(props) {
       <TextField
         label="Nome"
         type="text"
-        styleSheet={{width:'90%'}}
+        styleSheet={{ width: '90%' }}
         textFieldColors={{
           neutral: {
             textColor: `white `,
@@ -98,7 +97,7 @@ function Cadastro(props) {
       <TextField
         label="E-mail"
         type="email"
-        styleSheet={{width:'90%'}}
+        styleSheet={{ width: '90%' }}
         textFieldColors={{
           neutral: {
             textColor: 'white',
@@ -111,7 +110,7 @@ function Cadastro(props) {
       <TextField
         label="Senha"
         type="password"
-        styleSheet={{width:'90%'}}
+        styleSheet={{ width: '90%' }}
 
         textFieldColors={{
           neutral: {
@@ -123,10 +122,10 @@ function Cadastro(props) {
         }}
       />
       <TextField
-      
+
         label="Confirmar Senha"
         type="password"
-        styleSheet={{width:'90%'}}
+        styleSheet={{ width: '90%' }}
 
         textFieldColors={{
           neutral: {
@@ -272,52 +271,15 @@ function ConteudoDefault(props) {
   let setCadastro = props.setCadastro
   props.setTitulo('Acesse ou Cadastre-se')
 
-  //Google login Inicio
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [profilePic, setProfilePic] = useState();
-  const [idGoogle, setIdGoogle] = useState();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const sucessoGoogle = (response) => {
-    console.log(response);
-    const {
-      profileObj: { name, email, imageUrl, googleId },
-    } = response;
-    setName(name);
-    setEmail(email);
-    setProfilePic(imageUrl);
-    setIdGoogle(googleId);
-    setIsLoggedIn(true);
-  };
-
-  const falhaGoogle = () => {
-    alert('Erro ao fazer login com o Google!')
-  };
-  //Google login Fim
-
-
   return (
     <>
 
-      <Box styleSheet={{ justifyContent: 'space-between', display:'flex' }}>
-        {/*<Button
-          colorVariant="positive"
-          iconName="facebook"
-          label="Facebook"
-        />*/}
+      <Box styleSheet={{ justifyContent: 'space-between', display: 'flex' }}>
+
         <FacebookLoginComponent />
-        <Button
-          iconName="google"
-          label="Google"
-          size="md"
-        />
-        {/*               <GoogleLogin 
-                      clientId="1064343277548-vprmt852g7lfju46nm5b4513vrq1cnlh.apps.googleusercontent.com"
-                      buttonText="Google"
-                      onSuccess={sucessoGoogle}
-                      onFailure={falhaGoogle}
-                  />  */}
+
+        <GoogleLoginComponent />
+  
       </Box>
       <div className="detalhe">
         <p className="p-style">ou</p>
