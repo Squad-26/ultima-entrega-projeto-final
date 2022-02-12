@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Image } from '@skynexui/components'
-import Colors from '../theme/Colors'
 export default function Locais() {
   return (
     <Box
@@ -33,19 +32,24 @@ export default function Locais() {
         />
       </Box>
 
-export default function Locais(){
-    return(
-<Box
-  styleSheet={{
-    backgroundColor: {
-      xl: '#222'
-    },
-    color: 'orange',
-    height: '100vw',
-    padding: '16px'
-  }}
->
-  Locais
-</Box>
-    )
+      <div>Restaurante Toca da Cancela</div>
+      <Box
+        styleSheet={{
+          backgroundColor: {
+            xl: 'orange'
+          },
+          color: 'white',
+          margin: '16px',
+          padding: '16px'
+        }}
+      >
+        <Image
+          src="https://tocadacancela.pedzap.com.br/uploads/modules/estabelecimentos/1576_webapp_logomarca_256.png"
+          styleSheet={{
+            border: ''
+          }}
+        />
+      </Box>
+    </Box>
+  )
 }
