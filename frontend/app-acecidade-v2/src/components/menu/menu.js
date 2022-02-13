@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Modal from '../modal/modal'
-import logo from "../../../Acecidade.png"
+import logo from "../../assets/Acecidade.png"
 import './menu.css'
 import { Box, Button, Image } from '@skynexui/components';
 import Colors from '../../theme/Colors'

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Colors from '../theme/Colors';
+import Colors from '../../theme/Colors';
 import { TextField, Box, Button } from '@skynexui/components';
 import Select, { SelectOption } from '@workday/canvas-kit-react-select';
 import { FormField } from '@workday/canvas-kit-preview-react/form-field';

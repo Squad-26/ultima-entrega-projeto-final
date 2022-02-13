@@ -3,10 +3,10 @@ import {Routes, Route} from "react-router-dom"
 import Contatos from "./page/contatos/Contatos";
 import Home from "./page/home/Home";
 import Locais from "./page/locais/Locais";
-import Menu from "./page/components/menu/menu";
+import Menu from "./components/menu/menu";
 import Artigos from "./page/artigos/artigos";
 import './index.css'
-import Footer from "./page/components/footer/Footer";
+import Footer from "./components/footer/Footer";
 import VLibras from "@djpfs/react-vlibras";
 
 function App() {

@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Text, Image } from '@skynexui/components';
-import Colors from "../theme/Colors";
+import Colors from "../../theme/Colors";
 import './home.style.css'
-import fundo1 from '../../fundo1.jpg'
+import fundo1 from '../../assets/fundo1.jpg'
 import img1 from '../../assets/img1.jpg'
 import img2 from '../../assets/img2.jpg'
 
