@@ -5,28 +5,24 @@ import logo from "../../../Acecidade.png"
 import './menu.css'
 import { Box, Button, Image } from '@skynexui/components';
 import Colors from '../../theme/Colors'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Navbar, Form, NavDropdown, FormControl, Nav, Offcanvas, Container } from 'react-bootstrap'
+
+
+const tamanhoMinimoDeTela = 700
 
 export default function Menu() {
   const [ModalVisivel, setModalVisivel] = useState(false)
+
   return(
-    <MenuPC setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel}/>
+    <NavBar setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel}/> 
   )
 }
 
-export function ButtunLink({ href = '/', nome = "trocar" }) {
 
-  const paginaAtual = useLocation()
+function NavBar({setModalVisivel, ModalVisivel}){
+  const query = useMediaQuery(`(min-width:${tamanhoMinimoDeTela}px)`);
 
-  var styleHoverLink = 'style-link hover'
-  if (paginaAtual.pathname === href) {
-    styleHoverLink += ' btn-border-bottom'
-  }
-  return (<Link to={href}><span ><p className={styleHoverLink}>{nome}</p></span></Link>)
-}
-
-
-
-function MenuPC({setModalVisivel, ModalVisivel}){
   return (
     <>
       <Box on
@@ -38,19 +34,27 @@ function MenuPC({setModalVisivel, ModalVisivel}){
           xl: 'white',
           xs: 'white'
         },
-        ' box-shadow': '0 0 5px rgba(237, 134, 0, 0.6)',
-        'border-bottom': `${Colors.orenger}, solid 1px`,
-        'justify-content': 'space-between',
+        'box-shadow': '0 0 5px rgba(237, 134, 0, 0.6)',
+        borderBottom: ` rgba(237, 134, 0, 0.6) solid 1px`,
+        display: 'flex',justifyContent: 'space-between',alignItems: 'center',
         color: Colors.Azul_Menu,
-        display: 'flex',
         height: '90px',
         color: 'white',
-        padding: '16px',
+        padding: '16px 16px 16px 25px ',
       }}
         tag="header"
       >
 
-        <Image className="ml-6" src={logo} alt="logo com um homem segurando muletas e ao seu redor simbolos representando os pcds" />{/* adicionar o click pra home */}
+        {query? <Pc setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel} />: <Mobilee /* setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel} */ />}
+      </Box>
+    </>
+  )
+}
+
+function Pc({setModalVisivel, ModalVisivel}){
+      return(
+        <>
+          <Image className=" logo" src={logo} alt="logo com um homem segurando muletas e ao seu redor simbolos representando os pcds" />{/* adicionar o click pra home */}
         <Box styleSheet={{
           color: Colors.Azul_Menu,
           display: 'flex',
@@ -92,9 +96,65 @@ function MenuPC({setModalVisivel, ModalVisivel}){
           }}
           variant="secondary"
         />
+              {ModalVisivel ? <Modal onClose={() => setModalVisivel(false)} /> : null}
 
-      </Box>
-      {ModalVisivel ? <Modal onClose={() => setModalVisivel(false)} /> : null}
-    </>
+        </>
+      )
+}
+
+
+
+function ButtunLink({ href = '/', nome = "trocar" }) {
+
+  const paginaAtual = useLocation()
+
+  var styleHoverLink = 'style-link hover'
+  if (paginaAtual.pathname === href) {
+    styleHoverLink += ' btn-border-bottom'
+  }
+  return (<Link to={href}><span ><p className={styleHoverLink}>{nome}</p></span></Link>)
+}
+
+
+function Mobilee(){
+  return(
+    <Navbar bg="light" expand={false}>
+  <Container fluid>
+    <Navbar.Brand href="/">AceCidade</Navbar.Brand>
+    <Navbar.Toggle aria-controls="offcanvasNavbar" />
+    <Navbar.Offcanvas
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+      placement="end"
+    >
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title id="offcanvasNavbarLabel">AceCidade</Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body>
+        <Nav className="justify-content-end flex-grow-1 pe-3">
+          <Nav.Link href="#action1">Home</Nav.Link>
+          <Nav.Link href="#action2">Link</Nav.Link>
+          <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
+            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action5">
+              Something else here
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Form className="d-flex">
+          <FormControl
+            type="search"
+            placeholder="Search"
+            className="me-2"
+            aria-label="Search"
+          />
+          <Button variant="outline-success">Search</Button>
+        </Form>
+      </Offcanvas.Body>
+    </Navbar.Offcanvas>
+  </Container>
+</Navbar>
   )
 }

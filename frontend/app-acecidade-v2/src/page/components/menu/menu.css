@@ -25,3 +25,12 @@
     font-size: 16px;
     padding: .5rem;
 }
+
+.embad{
+    border: 20px solid #ed8600;
+    border-radius: 0px 50px 50px 50px ;
+    padding: 0;
+}
+.logo{
+    width: 5.5rem;
+}

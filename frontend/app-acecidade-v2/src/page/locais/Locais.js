@@ -1,6 +1,20 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Box, Image } from '@skynexui/components'
+
+
 export default function Locais() {
+
+  const [github, setGithub] = useState({})
+
+
+  useEffect(() => {
+    fetch('https://api.github.com/users/jonasjesus42')
+    .then( async (res) => await res.json())
+     .then((res) => {
+      setGithub(res)
+     } )
+  })
+
   return (
     <Box styleSheet={{
       display: 'flex'
@@ -30,7 +44,7 @@ export default function Locais() {
         }}
       >
 
-        <CardRestaurantes nomeRestaurante='bobs' />
+        <CardRestaurantes nomeRestaurante={github.name} />
         <CardRestaurantes nomeRestaurante='arroz' />
         <CardRestaurantes nomeRestaurante='livro' />
         <CardRestaurantes nomeRestaurante='bobs' />
