@@ -8,10 +8,12 @@ import Acessibilidade from "./page/acessibilidade/Acessibilidade";
 import './index.css'
 import Footer from "./page/components/footer/Footer";
 import VLibras from "@djpfs/react-vlibras";
+import { AuthProvider } from "./providers/auth"
 
 function App() {
   return (
     <>
+    <AuthProvider>
       <Menu />
       
       <Routes>
@@ -25,6 +27,7 @@ function App() {
       </Routes>
       <Footer />
        <VLibras />
+    </AuthProvider>
     </>
   );
 }

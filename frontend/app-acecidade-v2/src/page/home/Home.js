@@ -6,7 +6,6 @@ import fundo1 from '../../assets/fundo1.jpg'
 import img1 from '../../assets/img1.jpg'
 import img2 from '../../assets/jonas_fundo_off.png'
 
-
 export default function Home() {
   return (
     <>
@@ -103,7 +102,7 @@ export default function Home() {
             }}
           />
         </Box>
-
+         
       </Box>
     </>
   )
