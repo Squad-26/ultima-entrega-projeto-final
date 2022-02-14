@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate} from 'react-router-dom'
 import Modal from '../modal/modal'
 import logo from "../../../Acecidade.png"
 import './menu.css'
@@ -13,6 +13,7 @@ const tamanhoMinimoDeTela = 700
 
 export default function Menu() {
   const [ModalVisivel, setModalVisivel] = useState(false)
+
 
   return(
     <NavBar setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel}/> 
@@ -39,7 +40,6 @@ function NavBar({setModalVisivel, ModalVisivel}){
         display: 'flex',justifyContent: 'space-between',alignItems: 'center',
         color: Colors.Azul_Menu,
         height: '90px',
-        color: 'white',
         padding: '16px 16px 16px 25px ',
       }}
         tag="header"
@@ -52,9 +52,12 @@ function NavBar({setModalVisivel, ModalVisivel}){
 }
 
 function Pc({setModalVisivel, ModalVisivel}){
+  const navigate = useNavigate()
       return(
         <>
-          <Image className=" logo" src={logo} alt="logo com um homem segurando muletas e ao seu redor simbolos representando os pcds" />{/* adicionar o click pra home */}
+          <Image className="logo" src={logo} alt="logo com um homem segurando muletas e ao seu redor simbolos representando os pcds" onClick={() => {
+            navigate('/')
+          }}/>
         <Box styleSheet={{
           color: Colors.Azul_Menu,
           display: 'flex',
