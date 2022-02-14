@@ -44,7 +44,6 @@ function MenuPC({setModalVisivel, ModalVisivel}){
         color: Colors.Azul_Menu,
         display: 'flex',
         height: '90px',
-        color: 'white',
         padding: '16px',
       }}
         tag="header"
