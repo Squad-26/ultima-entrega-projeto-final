@@ -71,7 +71,7 @@ function MenuPC({setModalVisivel, ModalVisivel}){
             <ButtunLink nome='Home' href='/' />
             <ButtunLink nome='Contatos' href='/contatos' />
             <ButtunLink nome='Locais' href='/locais' />
-            <ButtunLink nome='Artigos' href='/artigos' />
+            <ButtunLink nome='Acessibilidade' href='/acessibilidade' />
 
 
           </Box>
