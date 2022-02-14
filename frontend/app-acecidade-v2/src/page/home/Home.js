@@ -25,8 +25,7 @@ export default function Home() {
           fontFamily: 'roboto',
         }}
       >
-        <h1 className="texto-azul texto-sombra">Na luta por cidades mais<br /><span className="texto-laranja texto-sombra">ACESSÍVEIS</span></h1>
-      </Box>
+<h1 className="texto-azul texto-sombra"><span className="texto-laranja texto-sombra">aceCidade<br/></span>Na luta por cidades mais<br /><span className="texto-laranja texto-sombra">ACESSÍVEIS</span></h1>      </Box>
       <Box
         tag="div"
         styleSheet={{

@@ -2,57 +2,57 @@ import React from 'react'
 import { Box, Image } from '@skynexui/components'
 export default function Locais() {
   return (
-  <Box styleSheet={{
-    display:'flex'
-  }}>
-    <Box
-  styleSheet={{
-    backgroundColor: 'black',
-    color: 'white',
-    height: '100vh',
-    margin: '35px 10px',
-    padding: '16px',
-    width: '25vw',
-    borderRadius:'10px'
-  }}
->
-  Box Component
-</Box>
-  <Box
-    styleSheet={{
-      backgroundColor: 'black',
-      color: 'white',
-      height: 'auto',
-      margin: '35px 10px',
-      padding: '16px',
-      width: '70vw',
-      borderRadius:'10px'
-    }}
-  >
+    <Box styleSheet={{
+      display: 'flex'
+    }}>
+      <Box
+        styleSheet={{
+          backgroundColor: 'black',
+          color: 'white',
+          height: '100vh',
+          margin: '35px 10px',
+          padding: '16px',
+          width: '25vw',
+          borderRadius: '10px'
+        }}
+      >
+        Box Component
+      </Box>
+      <Box
+        styleSheet={{
+          backgroundColor: 'black',
+          color: 'white',
+          height: 'auto',
+          margin: '35px 10px',
+          padding: '16px',
+          width: '70vw',
+          borderRadius: '10px'
+        }}
+      >
 
-      <CardRestaurantes nomeRestaurante='bobs' />
-      <CardRestaurantes nomeRestaurante='arroz' />
-      <CardRestaurantes nomeRestaurante='livro' />
-      <CardRestaurantes nomeRestaurante='bobs' />
-      <CardRestaurantes nomeRestaurante='bobs' />
-      <CardRestaurantes nomeRestaurante='bobs' />
-      <CardRestaurantes nomeRestaurante='bobs' />
-      <CardRestaurantes nomeRestaurante='bobs' />
-      <CardRestaurantes nomeRestaurante='bobs' />
-     
-    
+        <CardRestaurantes nomeRestaurante='bobs' />
+        <CardRestaurantes nomeRestaurante='arroz' />
+        <CardRestaurantes nomeRestaurante='livro' />
+        <CardRestaurantes nomeRestaurante='bobs' />
+        <CardRestaurantes nomeRestaurante='bobs' />
+        <CardRestaurantes nomeRestaurante='bobs' />
+        <CardRestaurantes nomeRestaurante='bobs' />
+        <CardRestaurantes nomeRestaurante='bobs' />
+        <CardRestaurantes nomeRestaurante='bobs' />
 
-  </Box>
-  </Box>
+
+
+      </Box>
+    </Box>
   )
 }
 
 
-function CardRestaurantes({nomeRestaurante='trocar nome', imgSRC="https://images.vexels.com/media/users/3/128437/isolated/lists/2dd809b7c15968cb7cc577b2cb49c84f-logotipo-de-restaurante-de-comida-de-pizza.png"}){
-  return(
+function CardRestaurantes({ nomeRestaurante = 'trocar nome', imgSRC = "https://images.vexels.com/media/users/3/128437/isolated/lists/2dd809b7c15968cb7cc577b2cb49c84f-logotipo-de-restaurante-de-comida-de-pizza.png" }) {
+  return (
     <>
-    
-    <Box
+
+      <Box
         styleSheet={{
           backgroundColor: {
             xl: 'orange'
@@ -68,10 +68,10 @@ function CardRestaurantes({nomeRestaurante='trocar nome', imgSRC="https://images
           styleSheet={{
             border: ''
           }}
-          />
-          <div>{nomeRestaurante}</div>
+        />
+        <div>{nomeRestaurante}</div>
       </Box>
-    
+
     </>
   )
 }
