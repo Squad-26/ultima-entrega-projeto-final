@@ -9,9 +9,9 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "@workday/canvas-kit-css": "^6.3.10",
-    "@workday/canvas-kit-preview-react": "^6.3.10",
-    "@workday/canvas-kit-react": "^6.3.10",
+    "@workday/canvas-kit-css": "^6.4.0",
+    "@workday/canvas-kit-preview-react": "^6.4.0",
+    "@workday/canvas-kit-react": "^6.4.0",
     "@workday/canvas-kit-react-select": "^4.8.1",
     "bootstrap": "^5.1.3",
     "formik": "^2.2.9",
@@ -52,6 +52,6 @@
     ]
   },
   "devDependencies": {
-    "storybook-formik": "^2.3.0"
+    "storybook-formik": "^2.3.1"
   }
 }
