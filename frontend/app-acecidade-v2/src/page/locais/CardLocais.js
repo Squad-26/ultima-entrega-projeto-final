@@ -27,7 +27,7 @@ function CardRestaurantes({
         <Box styleSheet={{margin: '20px'}}>{nomeRestaurante} </Box>
         <Box styleSheet={{margin: '20px', width: '50%'}}>{descrRest}</Box>
         <Box styleSheet= {{height:'50px', width: '50px', margin: '10px'}}></Box>
-        <Box tag='div' styleSheet={{}}>
+        <Box tag='div' styleSheet={{display:''}}>
           <Image src={icoDef1} styleSheet={{height:'50px', width:'50px', margin: '20px'}}/>
           <Image src={icoDef2} styleSheet={{height:'50px', width:'50px', margin: '20px'}}/>
           <Image src={icoDef3} styleSheet={{height:'50px', width:'50px', margin: '20px'}}/>
