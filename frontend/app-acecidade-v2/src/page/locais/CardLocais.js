@@ -1,6 +1,6 @@
 import { Box, Image } from '@skynexui/components'
 import React from 'react'
-import 
+
 
 function CardRestaurantes({
   nomeRestaurante = 'trocar nome',
