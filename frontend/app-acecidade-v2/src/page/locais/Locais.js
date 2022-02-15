@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@skynexui/components'
 import CardRestaurantes from './CardLocais'
-import Filtro from './CardLocais'
+
 
 export default function Locais() {
   return (
@@ -15,8 +15,8 @@ export default function Locais() {
           padding: '16px',
           width: '25vw',
           borderRadius: '10px'
-        }}
-      >
+        }}>
+          Filtro
       </Box>
       <Box
         styleSheet={{
@@ -56,7 +56,7 @@ export default function Locais() {
 
         <CardRestaurantes
           nomeRestaurante="Fit On Me"
-          descrRest ='Saladas, falafels e muito tempero natural, sempre balancedo e apetitoso.'
+          descrRest ='Saladas, faláfels e muito tempero, sempre balancedo e apetitoso.'
           imgSRC="https://files.menudino.com/cardapios/18731/logo.png"
         />
 

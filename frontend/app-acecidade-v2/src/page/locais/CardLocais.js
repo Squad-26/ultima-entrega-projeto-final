@@ -24,18 +24,17 @@ function CardRestaurantes({
           display: 'flex'
         }}
       >
-        <Image src={imgSRC} styleSheet={{padding: '10px' }} />
-        <Box styleSheet={{margin: '5px', height:'20%'}}>{nomeRestaurante} </Box>
-        <Box styleSheet={{margin: '10px', height:'30%'}}>{descrRest}</Box>
+        <Image src={imgSRC} styleSheet={{padding: '16px' }} />
+        <Box styleSheet={{margin: '20px'}}>{nomeRestaurante} </Box>
+        <Box styleSheet={{margin: '20px', width: '50%'}}>{descrRest}</Box>
         <Box styleSheet= {{height:'50px', width: '50px', margin: '10px'}}></Box>
-        <Box tag='div' styleSheet={{display:'block'}}>
-          <Image src={icoDef1} styleSheet={{height:'45px', width:'45px', margin: '17px'}}/>
-          <Image src={icoDef2} styleSheet={{height:'45px', width:'45px', margin: '17px'}}/>
-          <Image src={icoDef3} styleSheet={{height:'45px', width:'45px', margin: '17px'}}/>
+        <Box tag='div' styleSheet={{display:''}}>
+          <Image src={icoDef1} styleSheet={{height:'50px', width:'50px', margin: '20px'}}/>
+          <Image src={icoDef2} styleSheet={{height:'50px', width:'50px', margin: '20px'}}/>
+          <Image src={icoDef3} styleSheet={{height:'50px', width:'50px', margin: '20px'}}/>
         </Box>
       </Box>
     </div>
   )
 }
-
-export default (CardRestaurantes, Filtro)
+export default CardRestaurantes
