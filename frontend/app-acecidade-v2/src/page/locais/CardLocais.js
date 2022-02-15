@@ -37,7 +37,4 @@ function CardRestaurantes({
     </div>
   )
 }
-
-
-
 export default CardRestaurantes
