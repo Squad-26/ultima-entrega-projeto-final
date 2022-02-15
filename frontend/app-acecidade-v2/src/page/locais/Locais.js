@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@skynexui/components'
 import CardRestaurantes from './CardLocais'
-import Filtro from './CardLocais'
+import Filtro from './Filtro'
 
 export default function Locais() {
   return (
@@ -17,7 +17,8 @@ export default function Locais() {
           borderRadius: '10px'
         }}
       >
-        <Filtro></Filtro>
+        <Filtro/>
+        
       </Box>
       <Box
         styleSheet={{
