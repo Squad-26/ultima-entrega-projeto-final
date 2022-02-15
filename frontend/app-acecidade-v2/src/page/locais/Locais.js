@@ -17,7 +17,6 @@ export default function Locais() {
           borderRadius: '10px'
         }}
       >
-        <Filtro></Filtro>
       </Box>
       <Box
         styleSheet={{
