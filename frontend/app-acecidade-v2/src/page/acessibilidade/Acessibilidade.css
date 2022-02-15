@@ -1,0 +1,29 @@
+.h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #2c8df5;
+    color: white;
+    font-size: 28px;
+}
+
+.h2 {
+    height: 50px;
+    background-color: #2c8df5;
+}
+
+.h2 h2 {
+    color: white;
+    font-size: 24px;
+    margin-left: 1%;
+}
+a{
+    color: blue;
+}
+.content {
+    padding: 2%;
+    text-align: justify;
+    max-width: 1200px;
+    margin: auto;
+}

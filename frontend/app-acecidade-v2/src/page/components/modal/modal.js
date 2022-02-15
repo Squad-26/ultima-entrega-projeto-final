@@ -29,7 +29,6 @@ export default function Modal({ id = 'modal', onClose = () => { }, children }) {
         aligItems: ' center',
         justifyContent: 'center',
         position: 'absolute',
-        top: '0px',
         'z-index': 10,
         overflow: 'hidden'
       }

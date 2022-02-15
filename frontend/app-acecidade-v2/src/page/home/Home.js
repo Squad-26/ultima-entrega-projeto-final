@@ -4,8 +4,7 @@ import Colors from "../theme/Colors";
 import './home.style.css'
 import fundo1 from '../../assets/fundo1.jpg'
 import img1 from '../../assets/img1.jpg'
-import img2 from '../../assets/img2.jpg'
-
+import img2 from '../../assets/jonas_fundo_off.png'
 
 export default function Home() {
   return (
@@ -25,8 +24,7 @@ export default function Home() {
           fontFamily: 'roboto',
         }}
       >
-        <h1 className="texto-azul texto-sombra">Na luta por cidades mais<br /><span className="texto-laranja texto-sombra">ACESSÍVEIS</span></h1>
-      </Box>
+      <h1 className="texto-azul texto-sombra"><span className="texto-laranja texto-sombra">aceCidade<br/></span>Na luta por cidades mais<br /><span className="texto-laranja texto-sombra">ACESSÍVEIS</span></h1>      </Box>
       <Box
         tag="div"
         styleSheet={{
@@ -37,7 +35,7 @@ export default function Home() {
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}
       >
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/sQGsKXFIg5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className="embad" width="560" height="315" src="https://www.youtube.com/embed/sQGsKXFIg5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
       </Box>
       <Box
@@ -63,10 +61,13 @@ export default function Home() {
           className="texto-azul"
           styleSheet={{
             width: '600px',
+            height: '300px',
             fontFamily: 'roboto',
+            fontSize: '1.5rem', 
+            textAlign: 'left' 
           }}
         >
-          Encontre locais que contenham acessibilidade. Encontre locais com rampas de acesso, cardápio em braile, intérprete de libras e outros tipos de acessibilidade, olhe os comentários dos usuários sobre os locais e encontre o local mais confortável para você.
+          Imagine chegar em um local para jantar com a família e não ter uma rampa de acesso, não ter alguém que entenda libras para te atender ou depender de alguém para ler o cardápio pois o restaurante não pensou em você, A Acessidade vem para impedir isso, veja locais recomendados perto de você, leia os feedbacks sobre o local deixado por usuários com deficiência, veja a melhor rota, as imagens do local e encontre o melhor local para você se sentir confortável. 
         </Text>
 
       </Box>
@@ -82,11 +83,14 @@ export default function Home() {
       >
         <Text
           tag="p"
-          variant="h4"
+          variant="h2"
           className="texto-laranja"
           styleSheet={{
-            width: '600px',
+            width: '37.7rem',
+            height: '300px',
             fontFamily: 'roboto',
+            fontSize: '2rem', 
+            textAlign: 'left' 
           }}
         >
           Encontre locais que contenham acessibilidade locais com rampas de acesso, cardápio em braile, intérprete de libras e outros tipos de acessibilidade, olhe os comentários dos usuários sobre os locais e encontre o local mais confortável para você.
@@ -98,7 +102,7 @@ export default function Home() {
             }}
           />
         </Box>
-
+         
       </Box>
     </>
   )
