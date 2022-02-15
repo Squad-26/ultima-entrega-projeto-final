@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-a{
-    text-decoration: none;
-    margin-right: 5px;
-    max-height: 100%;
-    display: flex;
-}
+
 
 .hover{
     border-radius: 5px;
@@ -29,4 +24,38 @@ a{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     padding: .5rem;
+}
+
+.embad{
+    border: 20px solid #ed8600;
+    border-radius: 0px 50px 50px 50px ;
+    padding: 0;
+ 
+}
+.logo{
+    width: 5.5rem;
+    cursor: pointer;
+    margin-top: -10px;
+}
+.btn-menu{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 1px solid #ed8600;
+    padding:  5px 10px 5px 10px;
+    color: #ed8600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-menu:hover{
+    box-shadow: '0 0 5px rgba(237, 134, 0, 0.3),     0 0 15px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3),     0 0 45px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3) inset';
+}
+
+.img-login{
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px 0 0;
 }

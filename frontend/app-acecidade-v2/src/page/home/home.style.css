@@ -1,0 +1,11 @@
+.texto-sombra{
+    text-shadow: 0.1em 0.1em 0.2em black
+}
+
+.texto-azul{
+    color: #03A9F4;
+}
+
+.texto-laranja{
+    color:#FF9100;
+}
