@@ -17,7 +17,7 @@ const tamanhoMinimoDeTela = 700
 
 export default function Menu() {
   return (
-    <NavBar/>
+    <NavBar />
   )
 }
 
@@ -55,8 +55,8 @@ function NavBar() {
 
 function Pc() {
   const navigate = useNavigate()
-  const {user} = React.useContext(AuthContex)
-  const {modalIsAtive, setModalIsAtive } = React.useContext(ModalContex)
+  const { user } = React.useContext(AuthContex)
+  const { modalIsAtive, setModalIsAtive } = React.useContext(ModalContex)
 
   return (
     <>
@@ -84,28 +84,29 @@ function Pc() {
           <ButtunLink nome='Contatos' href='/contatos' />
           <ButtunLink nome='Locais' href='/locais' />
           <ButtunLink nome='Acessibilidade' href='/acessibilidade' />
+          <ButtunLink nome='Quem Somos' href='/quemSomos' />
 
 
         </Box>
       </Box>
-      {user.isLoggedIn? <Btn name={user.name} fotoPerfil={user.profilePic}/>: <Button
-          label="Entre ou Cadastre-se"
-          onClick={
-            () => { setModalIsAtive(true) }
+      {user.isLoggedIn ? <Btn name={user.name} fotoPerfil={user.profilePic} /> : <Button
+        label="Entre ou Cadastre-se"
+        onClick={
+          () => { setModalIsAtive(true) }
+        }
+        rounded="full"
+        size="xl"
+        styleSheet={{
+          disabled: {},
+          focus: {},
+          hover: {
+            'box-shadow': '0 0 5px rgba(237, 134, 0, 0.3),     0 0 15px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3),     0 0 45px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3) inset'
           }
-          rounded="full"
-          size="xl"
-          styleSheet={{
-            disabled: {},
-            focus: {},
-            hover: {
-              'box-shadow': '0 0 5px rgba(237, 134, 0, 0.3),     0 0 15px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3),     0 0 45px rgba(237, 134, 0, 0.3),     0 0 25px rgba(237, 134, 0, 0.3) inset'
-            }
-          }}
-          variant="secondary"
-        />}
-      
-      {modalIsAtive? <Modal onClose={() => setModalIsAtive(false)} /> : null }
+        }}
+        variant="secondary"
+      />}
+
+      {modalIsAtive ? <Modal onClose={() => setModalIsAtive(false)} /> : null}
 
     </>
   )
@@ -127,29 +128,29 @@ function ButtunLink({ href = '/', nome = "trocar" }) {
 
 function Mobilee() {
   return (
-<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Container fluid>
-  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="me-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav>
-    <Nav>
-      <Nav.Link href="#deets">More deets</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Dank memes
-      </Nav.Link>
-    </Nav>
-  </Navbar.Collapse>
-  </Container>
-</Navbar>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container fluid>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
 
-function Btn({name="test", fotoPerfil='semimg'}){
-  return(
-      <button className='btn-menu'><img className='img-login' src={fotoPerfil} alt='foto peril' />{name}</button>
+function Btn({ name = "test", fotoPerfil = 'semimg' }) {
+  return (
+    <button className='btn-menu'><img className='img-login' src={fotoPerfil} alt='foto peril' />{name}</button>
   )
 }
