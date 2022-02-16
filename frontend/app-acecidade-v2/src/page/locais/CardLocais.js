@@ -31,7 +31,4 @@ function CardRestaurantes({
       </Box>
   )
 }
-
-
-
 export default CardRestaurantes
