@@ -11,7 +11,7 @@
 	<groupId>com.squad26.api</groupId>
 	<artifactId>squad26</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>api</name>
+	<name>api1</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
