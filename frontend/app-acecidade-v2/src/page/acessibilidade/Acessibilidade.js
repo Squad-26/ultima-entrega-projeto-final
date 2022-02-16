@@ -27,7 +27,7 @@ export default function Acessibilidade () {
         <div className="h2">
           <h2> Dicas de Navegação </h2>{" "}
         </div>{" "}
-        <h3> Como aumentar e diminuir o texto </h3>{" "}
+        <h3 > Como aumentar e diminuir o texto </h3>{" "}
         <p>
           Esse site permite o uso eficiente dos recursos de zoom nativo do seu
           navegador.Para aumentar a fonte e ampliar o conteúdo pressione as
@@ -47,7 +47,7 @@ export default function Acessibilidade () {
           {" "}
           Caso encontre algum obstáculo de acessibilidade nas páginas, fique à
           vontade para entrar em contato e especificar as dificuldades através
-          do e - mail www.acecidade.com.br {" "}
+          do e - mail appacecidade@gmail.com {" "}
         </p>{" "}
         <div className="h2">
           <h2> Tecnologias assistivas </h2>{" "}
