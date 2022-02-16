@@ -45,11 +45,11 @@ export default function QuemSomos() {
         <>
             <Box styleSheet={{
                 backgroundColor: { xl: '#222' },
-                color: 'orange', height: '100%', width: '100%', display: 'max-width', padding: '0px', margin: '0px',
+                color: 'orange', height: '100%', width: '100%', display: 'flex', 'max-width': 'auto', padding: '0px', marginBottom: '10px',
             }}>
                 <Box tag="div" styleSheet={{
                     backgroundColor: { xl: '#222' },
-                    color: 'orange', height: '100%', width: '100%', margin: '0px',
+                    color: 'orange', height: '100%', width: '100%', marginbotom: '0px',
                     padding: '0px', display: 'flex', 'min-width': "auto", 'max-width': "auto", 'flex-wrap': 'wrap',
                 }}>
                     <div>
