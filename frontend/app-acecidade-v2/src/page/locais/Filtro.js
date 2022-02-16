@@ -1,15 +1,18 @@
 import { Box } from '@skynexui/components'
-
+import './Filtro.css'
 export default function Filtro (){
+
   return(
-    <Box styleSheet={{border:'5px solid orange', padding:'10px', fontFamily:'Verdana, sans-serif', fontWeight: '900'}}>
+    
+    <Box tag='div' className="custom-checkbox">
+      
           <h1>Filtro:</h1>
           <label for="acecidade1">Mobilidade reduzida </label>
-          <input type="checkbox" name="acecidade1" value="Mobilidade reduzida"/> <br/>
+          <input type="checkbox" id="acecidade1" /> 
           <label for="acecidade2">Orientações em braile </label>
-          <input type="checkbox" name="acecidade2" value="Orientações em braile"/> <br/>
+          <input type="checkbox" id="acecidade2" /> 
           <label for="acecidade3">Interprete de libras </label>
-          <input type="checkbox" name="acecidade3" value="Interprete de libras"/>
+          <input type="checkbox" id="acecidade3"/>
           </Box>
   )
 }

@@ -16,6 +16,7 @@ export default function Locais() {
           width: '25vw',
           borderRadius: '10px'
         }}>
+          
           <Filtro/>
 
       </Box>

@@ -21,7 +21,7 @@ function CardRestaurantes({
           display: 'flex'}}>
 
           <Image src={imgSRC} styleSheet={{ height:'225px', width: '225px', margin:'auto', border:'5px solid black', borderRadius:'5px' }}/>
-          <Box styleSheet={{margin: '20px', color:'black', fontFamily:'Verdana, sans-serif', fontWeight: '900'}}>{nomeRestaurante} </Box>
+          <Box styleSheet={{ width:'30%', margin: '20px', color:'black', fontFamily:'Verdana, sans-serif', fontWeight: '900'}}>{nomeRestaurante} </Box>
           <Box styleSheet={{margin: '20px', width: '50%', color:'black', fontFamily:'Verdana, sans-serif', fontWeight: '900'}}>{descrRest}</Box>
           <Box tag='div' styleSheet={{display:''}}>
           {icone1? <Image src='https://images.vexels.com/media/users/3/194664/isolated/lists/f19df9d4bcf1229f9b623358c69db93b-icone-de-alerta-para-deficiencia-visual.png' styleSheet={{height:'50px', width:'50px', margin: '20px'}}/> : null}
