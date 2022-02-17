@@ -46,8 +46,8 @@ function NavBar() {
         }}
         tag="header"
       >
-
-        {query ? <Pc /> : <Mobilee /* setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel} */ />}
+        <Pc /> 
+        {/*query ? : <Mobilee /* setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel}  />*/}
       </Box>
     </>
   )
