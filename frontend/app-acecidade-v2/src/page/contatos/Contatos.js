@@ -29,7 +29,7 @@ export default function Contatos() {
   const Titulo = styled.h1`
     font-size: 2rem;
     text-align: center;
-    color: #000000;
+    color: ${Colors.Background_1};
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
   `;
@@ -63,7 +63,8 @@ export default function Contatos() {
           padding: '16px',
           width: '60vw',
           'font-weight': 'bold',
-          'font-family': 'Arial, Helvetica, sans-serif'
+          'font-family': 'Arial, Helvetica, sans-serif',
+          color: `${Colors.Orange_900}`
         }}
       >
         <Titulo>Entre em contato conosco</Titulo>
@@ -131,6 +132,7 @@ export default function Contatos() {
             label="Escolher Arquivos"
             onChange={handleChangeFile}
             size="default"
+            styleSheet={{ backgroundColor: `${Colors.Orange_900}`}}
           />
           <Button
             label="Enviar"
@@ -138,7 +140,8 @@ export default function Contatos() {
             type="submit"
             styleSheet={{
               width: '100%',
-              margin: '1em 0px'
+              margin: '1em 0px',
+              backgroundColor: `${Colors.Orange_900}`
             }}
           />
         </form>
