@@ -6,10 +6,9 @@ import './menu.css'
 import { Box, Button, Image } from '@skynexui/components';
 import Colors from '../../theme/Colors'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { Nav, Container } from 'react-bootstrap'
-import Navbar from 'react-bootstrap/Navbar'
 import { AuthContex } from "../../../providers/auth";
 import { ModalContex } from "../../../providers/modal.js"
+import { Navbar, Container, Offcanvas, Nav, LinkContainer } from 'react-bootstrap';
 
 
 
@@ -128,24 +127,40 @@ function ButtunLink({ href = '/', nome = "trocar" }) {
 
 function Mobilee() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar bg="light" expand={false}>
       <Container fluid>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <Navbar.Brand as={Link} to="/">
+          <img
+            src={logo}
+            width="60"
+            height="60"
+            className="d-inline-block align-top"
+            alt="logo com um homem segurando muletas e ao seu redor simbolos representando os pcds  "
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Offcanvas
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+          placement="end"
+        >
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title id="offcanvasNavbarLabel">AceCidade</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Nav.Link as={Link} to="/">Home</Nav.Link>
+              <Nav.Link as={Link} to="/contatos">Contatos</Nav.Link>
+              <Nav.Link as={Link} to="/locais">Locais</Nav.Link>
+              <Nav.Link as={Link} to="/acessibilidade">Acessibilidade</Nav.Link>
+              <Nav.Link as={Link} to="/quemSomos">Quem Somos</Nav.Link>
+              <Btn />
+            </Nav>
+          </Offcanvas.Body>
+        </Navbar.Offcanvas>
       </Container>
     </Navbar>
+
   )
 }
 

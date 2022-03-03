@@ -10,22 +10,20 @@ import Footer from "./page/components/footer/Footer";
 import VLibras from "@djpfs/react-vlibras";
 import { AuthProvider } from "./providers/auth";
 import QuemSomos from "./page/quemSomos/QuemSomos"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <>
     <AuthProvider>
       <Menu />
-      
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contatos" element={<Contatos />} />
           <Route path="/locais" element={<Locais />} />
           <Route path="/acessibilidade" element={<Acessibilidade />} />
           <Route path="quemSomos" element={<QuemSomos />} />
-
-        <Route path="*" element={<h1>Pagina não Encontrada</h1>}/>
-        
+          <Route path="*" element={<h1>Pagina não Encontrada</h1>}/>        
       </Routes>
       <Footer />
        <VLibras />
