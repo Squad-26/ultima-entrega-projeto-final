@@ -1,12 +1,21 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Navbar, Container, Offcanvas, Nav, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from "../../../Acecidade.png"
 import { Link } from 'react-router-dom'
+import { Btn } from '../menu/menu'
+import Modal from '../modal/modal'
+import { ModalContex } from "../../../providers/modal";
+import { AuthContex } from "../../../providers/auth";
 
-function menuMobile() {
 
+function MenuMobile() {
+  const { user } = React.useContext(AuthContex)
+  const {modalIsAtive, setModalIsAtive} = useContext(ModalContex)
+
+  
 return(
+  <div>
   <Navbar bg="light" expand={false}>
     <Container fluid>
       <Navbar.Brand href="/">
@@ -35,14 +44,23 @@ return(
             <Nav.Link as={Link} to="/locais">Locais</Nav.Link>
             <Nav.Link as={Link} to="/acessibilidade">Acessibilidade</Nav.Link>
             <Nav.Link as={Link} to="/quemSomos">Quem Somos</Nav.Link>
-            <Button className='btn-menu' variant="outline-primary">Entre ou Cadastre-se</Button>
+              {user.isLoggedIn ? <Btn name={user.name} fotoPerfil={user.profilePic} /> : <Button
+               variant="outline-danger"
+                onClick={
+                  () => { setModalIsAtive(true) }
+                }
+                
+              >Entre ou Cadastre-se</Button>}
+
+              {modalIsAtive ? <Modal onClose={() => setModalIsAtive(false)} /> : null}
           </Nav>
         </Offcanvas.Body>
       </Navbar.Offcanvas>
     </Container>
   </Navbar>
+  </div>
 )
 
 }
 
-export default menuMobile
+export default MenuMobile

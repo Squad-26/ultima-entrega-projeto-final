@@ -8,7 +8,7 @@ import Colors from '../../theme/Colors'
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { AuthContex } from "../../../providers/auth";
 import { ModalContex } from "../../../providers/modal.js"
-import { Navbar, Container, Offcanvas, Nav, LinkContainer } from 'react-bootstrap';
+import MenuMobile from '../menuMobile/menuMobile'
 
 
 
@@ -27,27 +27,28 @@ function NavBar() {
 
   return (
     <>
-      <Box on
-        styleSheet={{
-          backgroundColor: {
-            lg: 'white',
-            md: 'white',
-            sm: 'white',
-            xl: 'white',
-            xs: 'white'
-          },
-          'box-shadow': '0 0 5px rgba(237, 134, 0, 0.6)',
-          borderBottom: ` rgba(237, 134, 0, 0.6) solid 1px`,
-          display: 'flex', justifyContent: 'space-around', alignItems: 'center',
-          color: Colors.Azul_Menu,
-          height: '90px',
-          padding: '16px 16px 16px 25px ',
-        }}
-        tag="header"
-      >
-
-        {query ? <Pc /> : <Mobilee /* setModalVisivel={setModalVisivel} ModalVisivel={ModalVisivel} */ />}
-      </Box>
+      {!query ? <MenuMobile /> :
+        <Box on
+          styleSheet={{
+            backgroundColor: {
+              lg: 'white',
+              md: 'white',
+              sm: 'white',
+              xl: 'white',
+              xs: 'white'
+            },
+            'box-shadow': '0 0 5px rgba(237, 134, 0, 0.6)',
+            borderBottom: ` rgba(237, 134, 0, 0.6) solid 1px`,
+            display: 'flex', justifyContent: 'space-around', alignItems: 'center',
+            color: Colors.Azul_Menu,
+            height: '90px',
+            padding: '16px 16px 16px 25px ',
+          }}
+          tag="header"
+        >
+          <Pc />
+        </Box>
+      }
     </>
   )
 }
@@ -125,46 +126,7 @@ function ButtunLink({ href = '/', nome = "trocar" }) {
 }
 
 
-function Mobilee() {
-  return (
-    <Navbar bg="light" expand={false}>
-      <Container fluid>
-        <Navbar.Brand as={Link} to="/">
-          <img
-            src={logo}
-            width="60"
-            height="60"
-            className="d-inline-block align-top"
-            alt="logo com um homem segurando muletas e ao seu redor simbolos representando os pcds  "
-          />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
-        <Navbar.Offcanvas
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-          placement="end"
-        >
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasNavbarLabel">AceCidade</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link as={Link} to="/">Home</Nav.Link>
-              <Nav.Link as={Link} to="/contatos">Contatos</Nav.Link>
-              <Nav.Link as={Link} to="/locais">Locais</Nav.Link>
-              <Nav.Link as={Link} to="/acessibilidade">Acessibilidade</Nav.Link>
-              <Nav.Link as={Link} to="/quemSomos">Quem Somos</Nav.Link>
-              <Btn />
-            </Nav>
-          </Offcanvas.Body>
-        </Navbar.Offcanvas>
-      </Container>
-    </Navbar>
-
-  )
-}
-
-function Btn({ name = "test", fotoPerfil = 'semimg' }) {
+export function Btn({ name = "test", fotoPerfil = 'semimg' }) {
   return (
     <button className='btn-menu'><img className='img-login' src={fotoPerfil} alt='foto peril' />{name}</button>
   )
