@@ -1,6 +1,6 @@
 const Colors = {
-    Background_1: '#373b44',
-    Background_2: '#4286f4',
+    Background_1: '#000000',
+    Background_2: '#241c1c',
     Azul_Menu: '#0072ED',
     Indigo_50: '#E8EAF6',
     Indigo_100: '#C5CAE9',
