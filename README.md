@@ -1,3 +1,3 @@
-# 3-entrega-projeto-final
+# ultima-entrega-projeto-final
 
-Repositório para desenvolvimento da terceira entrega do projeto final em Java com React. Prazo da entrega para o dia 15/02/2022.
+Repositório para desenvolvimento da última entrega do projeto final em Java com React. Prazo da entrega para o dia 22/03/2022.
